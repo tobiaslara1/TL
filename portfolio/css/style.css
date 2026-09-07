@@ -1,0 +1,27 @@
+html{
+    scroll-behavior: smooth;
+}
+
+
+header{
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+header h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+header p{
+    font-size: 25px;
+}
+
+nav{
+    display: flex;
+    gap: 60px;
+    font-size: 20px;
+
+}

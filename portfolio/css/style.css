@@ -2,9 +2,8 @@ html{
     scroll-behavior: smooth;
 }
 
-
 header{
-    background-color: darkblue;
+    background-color: #183153;
     color: white;
     text-align: center;
     padding: 5px;
@@ -21,7 +20,21 @@ header p{
 
 nav{
     display: flex;
-    gap: 60px;
+    gap: 40px;
     font-size: 20px;
+    background-color: #10233D;
+    color: white;
+}
 
+nav ul:hover{
+    background-color: rgb(60, 131, 238);
+    color: #10233D;
+}
+
+
+footer{
+    background-color: #10233D;
+    color: white;
+    text-align: center;
+    font-size: 20px;
 }

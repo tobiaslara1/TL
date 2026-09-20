@@ -5,7 +5,6 @@ html {
 body {
     margin: 0;
     background-color: #F6FAFE;
-    color: #24303c;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
 }
@@ -20,17 +19,7 @@ header {
     background-color: #183153;
     color: white;
     text-align: center;
-    padding: 3% 0;
-    }
-
-.header div h1 {
-    margin: 1%;
-    font-size: 40px;
-}
-
-.header div p {
-    margin: 0;
-    font-size: 19px;
+    padding: 2.5% 0;
 }
 
 nav {
@@ -38,11 +27,12 @@ nav {
     border-bottom: 2px solid #4fa6b8;
 }
 
-nav ul, nav ol {
+nav ul {
     display: flex;
     justify-content: center;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 nav a {
@@ -60,11 +50,15 @@ nav a:hover {
     color: #10233d;
 }
 
-section{
+main {
+    padding: 25px 0 50px;
+}
+
+section {
     background-color: white;
-    padding: 2%;
-    margin: 3%;
-    border: 1px solid #c4e5eb;
+    margin: 28px 0;
+    padding: 32px;
+    border: 1px solid #dce2e8;
     border-radius: 15px;
 }
 
@@ -100,7 +94,7 @@ section h2 {
     color: #2e5174;
 }
 
-.kartyak{
+.kartyak {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 18px;
@@ -125,14 +119,111 @@ section h2 {
     box-shadow: 0 8px 20px rgba(26, 90, 180, 0.15);
 }
 
-footer{
-    background-color: #183153;
-    color: white;
-    text-align: center;
-    padding: 40px 0;
+.projektGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
 }
 
-.header div p {
+.projektKartya {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #f8fafb;
+    border: 1px solid #d9e1e8;
+    border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.projektKartya:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(26, 84, 165, 0.15);
+}
+
+.projektKartya img {
+    width: 100%;
+    border-bottom: 1px solid #d9e1e8;
+}
+
+.projekt {
+    flex: 1;
+    padding: 20px;
+}
+
+.projekt h3 {
+    margin-top: 0;
+    color: #183153;
+}
+
+.kapcsolatGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.kapcsolat {
+    padding: 22px;
+    background-color: #14213a;
+    color: white;
+    border: 1px solid #203253;
+    border-radius: 15px;
+}
+
+.kapcsolat h4 {
+    margin-top: auto;
+}
+
+.kapcsolat p {
     margin: 0;
-    font-size: 19px;
+    font-size: 15px;
+}
+
+footer {
+    background-color: #10233d;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+footer p {
+    margin: 4px 0;
+}
+
+@media (max-width: 800px) {
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav a {
+        text-align: center;
+        border-radius: 0;
+        border-bottom: 1px solid #29415e;
+    }
+
+    .bemutat {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bemutat img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .kartyak {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projektGrid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 24px 18px;
+    }
+
+    .kapcsolatGrid {
+        grid-template-columns: 1fr;
+    }
 }
